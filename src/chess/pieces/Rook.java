@@ -2,17 +2,20 @@ package chess.pieces;
 
 import boardgame.Board;
 import chess.ChessPiece;
-
-import java.awt.*;
+import chess.Color;
 
 public class Rook extends ChessPiece {
     public Rook(Board board, Color color) {
-        super(board, color); //construtor da superclasse chesspiece
+        super(board, color);
     }
 
     @Override
-    public String toString(){
-        return "R";
+    public boolean[][] possibleMoves() {
+        return new boolean[0][];
     }
 
+    @Override
+    public String toString() {
+        return "R";
+    }
 }
