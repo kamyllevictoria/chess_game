@@ -50,22 +50,21 @@ public class UI {
             }
             System.out.println();
         }
-        System.out.println("  a  b  c  d  e  f  g  h ");
+        System.out.println("  a  b  c d e f g h ");
     }
 
     private static void printPiece(ChessPiece piece) {
         if (piece == null) {
-            System.out.print(ANSI_BLACK_BACKGROUND + "- " + ANSI_RESET);
+            System.out.print("- ");
         } else {
             if (piece.getColor() == Color.WHITE) {
-                System.out.print(ANSI_WHITE_BACKGROUND + ANSI_BLACK + piece + ANSI_RESET);
+                System.out.print(ANSI_WHITE + piece + ANSI_RESET);
             } else {
-                System.out.print(ANSI_YELLOW_BACKGROUND + ANSI_BLACK + piece + ANSI_RESET);
+                System.out.print(ANSI_YELLOW + piece + ANSI_RESET);
             }
         }
         System.out.print(" ");
     }
-
 
 
 
