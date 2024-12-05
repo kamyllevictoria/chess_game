@@ -21,11 +21,11 @@ public abstract class Piece {
         return possibleMoves()[position.getRow()][position.getColumn()];
     }
 
-    public boolean isThereAnyPossibleMove(){
+    public boolean isThereAnyPossibleMove() {
         boolean[][] mat = possibleMoves();
-        for(int i = 0; i < mat.length; i++){
-            for(int j = 0; j < mat.length; j++){
-                if(mat[i][j]){
+        for (int i = 0; i < mat.length; i++) {
+            for (int j = 0; j < mat[i].length; j++) {
+                if (mat[i][j]) {
                     return true;
                 }
             }
