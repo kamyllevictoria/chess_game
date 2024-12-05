@@ -7,6 +7,7 @@ import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.ChessPosition;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
@@ -26,7 +27,7 @@ public class Program {
                 ChessPosition source = UI.readChessPosition(sc);
 
                 boolean[][] possibleMoves = chessMatch.possibleMoves(source);
-
+                UI.clearScreen();
                 UI.printBoard(chessMatch.getPieces(), possibleMoves);
 
                 System.out.println();
@@ -35,8 +36,9 @@ public class Program {
 
 
                 ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
-            } catch (ChessException e){
-
+            } catch (ChessException | InputMismatchException e) {
+                System.out.println(e.getMessage());
+                sc.nextLine();
             }
 
         }
